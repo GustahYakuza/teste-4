@@ -12,11 +12,16 @@ let compliments = [
 ];
 
 function showRandomCompliment() {
-    const randomIndex = Math.floor(Math.random() * compliments.length);
-    const compliment = compliments[randomIndex];
-
     const complimentElement = document.querySelector('.compliment-text');
-    complimentElement.textContent = compliment;
+
+    // Verifica se o elemento foi encontrado antes de manipulá-lo
+    if (complimentElement) {
+        const randomIndex = Math.floor(Math.random() * compliments.length);
+        const compliment = compliments[randomIndex];
+        complimentElement.textContent = compliment;
+    } else {
+        console.error('Elemento .compliment-text não encontrado.');
+    }
 }
 
 document.getElementById('changeCompliment').addEventListener('click', showRandomCompliment);
