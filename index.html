@@ -10,32 +10,20 @@
       text-align: center;
       margin: 50px;
       background-color: #f9f9f9;
+      color: #333;
     }
     h1 {
       color: #ff6f61;
     }
-    button {
-      background-color: #ff6f61;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 10px;
-      border-radius: 5px;
-    }
     #output {
       margin-top: 20px;
       font-size: 18px;
-      color: #333;
     }
   </style>
 </head>
 <body>
 
   <h1>Te Amo Gatinha</h1>
-  <button onclick="gerarDeclaracao()">Gerar Declaração</button>
-  <button onclick="gerarElogio()">Gerar Elogio</button>
   <div id="output"></div>
 
   <script>
@@ -55,19 +43,17 @@
       "Ninguém me faz tão feliz como você."
     ];
 
-    function gerarDeclaracao() {
-      const randomIndex = Math.floor(Math.random() * declaracoes.length);
-      exibirMensagem(declaracoes[randomIndex]);
-    }
-
-    function gerarElogio() {
-      const randomIndex = Math.floor(Math.random() * elogios.length);
-      exibirMensagem(elogios[randomIndex]);
-    }
-
-    function exibirMensagem(mensagem) {
+    function gerarMensagem() {
+      const randomIndex = Math.floor(Math.random() * (declaracoes.length + elogios.length));
+      const mensagem = randomIndex < declaracoes.length ? declaracoes[randomIndex] : elogios[randomIndex - declaracoes.length];
       document.getElementById('output').innerHTML = `<p>${mensagem}</p>`;
     }
+
+    // Exibir uma mensagem automaticamente ao carregar a página
+    gerarMensagem();
+
+    // Você pode adicionar um intervalo para exibir uma nova mensagem a cada, por exemplo, 10 segundos
+    // setInterval(gerarMensagem, 10000);
   </script>
 
 </body>
