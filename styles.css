@@ -10,7 +10,7 @@ body {
     justify-content: center;
     height: 100vh;
     flex-direction: column;
-    color: #fff;
+    color: #333; /* Mudamos para uma cor de texto mais escura para melhor legibilidade */
 }
 
 header {
@@ -47,14 +47,22 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Adiciona sombreamento suave */
-.container, button {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Adiciona borda arredondada à caixa de elogio */
 #compliment {
     border-radius: 15px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo mais claro para parecer uma carta */
+    max-width: 600px; /* Limita a largura para melhor leitura */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adiciona borda como se fosse um selo */
+#compliment::before {
+    content: ' ';
+    display: block;
+    border: 5px solid #ff4d4d;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -35px auto 15px;
 }
