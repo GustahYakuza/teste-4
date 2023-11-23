@@ -24,6 +24,15 @@ header {
     text-align: center;
     margin-top: 20px;
 }
+@media (max-width: 600px) {
+    body {
+        /* Adicione estilos específicos para telas menores, se necessário */
+    }
+    header {
+        position: static; /* Garanta que o cabeçalho não seja fixado em telas pequenas */
+    }
+}
+
 
 form {
     background-color: #fff;
