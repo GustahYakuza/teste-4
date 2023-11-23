@@ -3,17 +3,18 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f8f8f8;
+    background: url('fundo-romantico.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     flex-direction: column;
+    color: #fff;
 }
 
 header {
-    background-color: #ff7070;
-    color: #fff;
+    background-color: rgba(255, 112, 112, 0.8);
     text-align: center;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -26,21 +27,34 @@ header {
 }
 
 button {
-    background-color: #ff7070;
+    background-color: #ff4d4d;
     color: #fff;
-    padding: 10px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #e5673b;
+    background-color: #e60000;
 }
 
 .compliment-text {
-    font-size: 24px;
-    color: #333;
-    margin-top: 10px;
+    font-size: 28px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Adiciona sombreamento suave */
+.container, button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adiciona borda arredondada à caixa de elogio */
+#compliment {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
