@@ -1,168 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Te Amo Gatinha</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-sDRhF1bEm9f8+9B23eA64Kaou98g0zDAiqKO8rMpL5I+lbqxg9YBqLiFu2hjUqjc" crossorigin="anonymous">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background-color: #fce4ec; /* Cor de fundo romântica */
-      overflow: hidden; /* Impede a barra de rolagem */
-    }
-
-    header {
-      background-color: #ff6f61;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    h1 {
-      color: white;
-      margin: 0;
-      font-size: 2.5em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .heart-icon {
-      margin-right: 10px;
-      color: #fff;
-    }
-
-    #loginContainer, #textContainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      margin-top: 80px; /* Adicionando margem para evitar que o conteúdo fique abaixo do cabeçalho */
-    }
-
-    #loginForm, #outputArea {
-      background-color: #fff;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      border-radius: 10px;
-      animation: fadeIn 1s ease-in-out;
-      width: 80%;
-      max-width: 400px; /* Limita a largura do formulário para melhor legibilidade em dispositivos móveis */
-      margin: 20px;
-    }
-
-    textarea {
-      width: 100%;
-      height: 150px;
-      resize: none;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    button {
-      background-color: #ff6f61;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      margin-top: 10px;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    button:hover {
-      background-color: #ff4f3e;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* Adicionando estilo único para dispositivos móveis */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5em;
-      }
-
-      #loginForm, #outputArea {
-        width: 90%;
-        margin: 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Elogios para Você</title>
 </head>
 <body>
-
-  <header>
-    <h1><i class="fas fa-heart heart-icon"></i> Te Amo Gatinha</h1>
-  </header>
-
-  <div id="loginContainer">
-    <div id="loginForm">
-      <h2 style="color: #ff6f61;">Login</h2>
-      <label for="username">Nome de Usuário:</label>
-      <input type="text" id="username" required>
-      <label for="password">Senha:</label>
-      <input type="password" id="password" required>
-      <button onclick="login()">Entrar</button>
-      <p>Esqueceu a senha? <a href="#">Recuperar senha</a></p>
+    <header>
+        <h1>Elogios para Minha Amor</h1>
+        <p>Seu sorriso ilumina meu dia!</p>
+    </header>
+    <div class="container">
+        <h2 id="compliment">Você é...</h2>
+        <button id="changeCompliment">Próximo Elogio</button>
+        <a href="login.html" id="loginLink">Login</a>
     </div>
-  </div>
+    <script src="script.js"></script>
+    <script>
+        // Adicione esta lógica para verificar se o usuário está autenticado
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-  <div id="textContainer">
-    <div id="outputArea">
-      <div id="output">
-        <p>Meu amor, Desde o momento em que nossos caminhos se cruzaram, minha vida ganhou cores mais vivas e o meu coração encontrou o seu verdadeiro lar. Tentar expressar em palavras o que sinto por você é como tentar descrever a imensidão do universo, pois o que temos é algo tão extraordinário e único que transcende qualquer explicação. Você é a luz que ilumina meus dias mais sombrios, a inspiração por trás dos meus sorrisos mais sinceros. Seu olhar é como um refúgio, um lugar onde encontro paz e amor incondicional. Cada detalhe seu é uma obra de arte, esculpida com perfeição pela mão do tempo. Sua bondade é um farol que guia o meu caminho, e sua compaixão é a força que impulsiona meu coração. Seu toque é suave como uma brisa, mas tem o poder de acender o fogo da paixão em mim. Em seus abraços, encontro segurança e aconchego, como se todo o caos do mundo desaparecesse. Sua inteligência é fascinante, um oceano profundo de sabedoria que me encanta a cada mergulho. Seu riso é a melodia mais doce que já ouvi, capaz de transformar um dia comum em uma sinfonia de felicidade. Cada palavra que você pronuncia é como poesia, um doce encantamento aos meus ouvidos. É a sua resiliência que mais admiro, a forma como enfrenta desafios com graciosidade e força. Seu coração generoso é uma fonte inesgotável de amor, um presente que recebo todos os dias. Cada dia ao seu lado é uma bênção, uma oportunidade de crescer, aprender e amar ainda mais. E mesmo enquanto escrevo estas palavras, sei que nunca conseguirei capturar completamente a grandeza do que sinto por você. Minha gratidão por tê-la em minha vida transborda, e meu amor por você cresce a cada batida do meu coração. Você é minha musa, minha confidente, meu amor eterno. Com todo o meu amor, [Seu Nome]</p>
-      </div>
-      <button onclick="mostrarLogin()">Voltar ao Login</button>
-    </div>
-  </div>
-
-  <script>
-    function mostrarConteudoAutenticado() {
-      document.getElementById('loginContainer').style.display = 'none';
-      document.getElementById('textContainer').style.display = 'block';
-    }
-
-    function mostrarTextoPersonalizado() {
-      document.getElementById('loginContainer').style.display = 'none';
-      document.getElementById('textContainer').style.display = 'block';
-    }
-
-    function login() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-
-      // Verifica se o nome de usuário e senha são 'anna' e 'gatinha'
-      if (username === 'anna' && password === 'gatinha') {
-        alert('Login bem-sucedido!');
-        mostrarConteudoAutenticado();
-      } else {
-        alert('Login falhou. Verifique seu nome de usuário e senha.');
-      }
-    }
-
-    function mostrarLogin() {
-      document.getElementById('loginForm').style.display = 'block';
-      document.getElementById('textContainer').style.display = 'none';
-    }
-  </script>
-
+        if (!isLoggedIn) {
+            // Redireciona para a página de login se não estiver autenticado
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>
