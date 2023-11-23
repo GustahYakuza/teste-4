@@ -10,7 +10,7 @@ body {
     justify-content: center;
     height: 100vh;
     flex-direction: column;
-    color: #333; /* Mudamos para uma cor de texto mais escura para melhor legibilidade */
+    color: #333;
 }
 
 header {
@@ -50,13 +50,12 @@ button:hover {
 #compliment {
     border-radius: 15px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo mais claro para parecer uma carta */
-    max-width: 600px; /* Limita a largura para melhor leitura */
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Adiciona borda como se fosse um selo */
 #compliment::before {
     content: ' ';
     display: block;
