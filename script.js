@@ -22,4 +22,4 @@ function showRandomCompliment() {
 document.getElementById('changeCompliment').addEventListener('click', showRandomCompliment);
 
 // Mostra um elogio ao carregar a página
-showRandomCompliment();
+document.addEventListener('DOMContentLoaded', showRandomCompliment);
