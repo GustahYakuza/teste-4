@@ -41,7 +41,6 @@ let compliments = [
 function showRandomCompliment() {
     const complimentElement = document.querySelector('.compliment-text');
 
-    // Verifica se o elemento foi encontrado antes de manipulá-lo
     if (complimentElement) {
         const randomIndex = Math.floor(Math.random() * compliments.length);
         const compliment = compliments[randomIndex];
@@ -53,5 +52,4 @@ function showRandomCompliment() {
 
 document.getElementById('changeCompliment').addEventListener('click', showRandomCompliment);
 
-// Mostra um elogio ao carregar a página
 document.addEventListener('DOMContentLoaded', showRandomCompliment);
