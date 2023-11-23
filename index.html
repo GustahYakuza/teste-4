@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Declarações e Elogios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Gerador de Declarações e Elogios</h1>
+  <button onclick="gerarDeclaracao()">Gerar Declaração</button>
+  <button onclick="gerarElogio()">Gerar Elogio</button>
+  <div id="output"></div>
+
+  <script>
+    const declaracoes = [
+      "Você é a luz da minha vida.",
+      "Minha vida é muito melhor com você ao meu lado.",
+      "Seu sorriso ilumina meu dia.",
+      "Amo a forma como você me faz sentir especial.",
+      "Você é a razão do meu sorriso diário."
+    ];
+
+    const elogios = [
+      "Você é incrivelmente talentosa.",
+      "Sua beleza é incomparável.",
+      "Admiro sua força e determinação.",
+      "Você sempre faz o melhor por mim.",
+      "Ninguém me faz tão feliz como você."
+    ];
+
+    function gerarDeclaracao() {
+      const randomIndex = Math.floor(Math.random() * declaracoes.length);
+      exibirMensagem(declaracoes[randomIndex]);
+    }
+
+    function gerarElogio() {
+      const randomIndex = Math.floor(Math.random() * elogios.length);
+      exibirMensagem(elogios[randomIndex]);
+    }
+
+    function exibirMensagem(mensagem) {
+      document.getElementById('output').innerHTML = `<p>${mensagem}</p>`;
+    }
+  </script>
+
+</body>
+</html>
