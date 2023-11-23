@@ -5,39 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Te Amo Gatinha</title>
   <style>
-    /* Estilos permanecem os mesmos */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #ffebee; /* Cor de fundo romântica */
+      overflow: hidden; /* Impede a barra de rolagem */
+    }
+
+    h1 {
+      color: #ff6f61;
+      margin-top: 50px;
+      font-size: 2.5em;
+    }
+
+    #loginContainer, #textContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #loginForm, #registerForm {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #outputArea {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    textarea {
+      width: 80%;
+      height: 150px;
+      resize: none;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
 
   <h1>Te Amo Gatinha</h1>
 
-  <div id="loginForm">
-    <h2>Login</h2>
-    <label for="username">Nome de Usuário:</label>
-    <input type="text" id="username" required>
-    <label for="password">Senha:</label>
-    <input type="password" id="password" required>
-    <button onclick="login()">Entrar</button>
-    <p>Ainda não tem uma conta? <a href="#" onclick="mostrarRegistro()">Registrar-se</a></p>
-  </div>
-
-  <div id="registerForm">
-    <h2>Registro</h2>
-    <label for="newUsername">Nome de Usuário:</label>
-    <input type="text" id="newUsername" required>
-    <label for="newPassword">Senha:</label>
-    <input type="password" id="newPassword" required>
-    <button onclick="register()">Registrar</button>
-    <p>Já tem uma conta? <a href="#" onclick="mostrarLogin()">Entrar</a></p>
-  </div>
-
-  <div id="outputArea">
-    <div id="output">
-      <p>Meu amor, Desde o momento em que nossos caminhos se cruzaram, minha vida ganhou cores mais vivas e o meu coração encontrou o seu verdadeiro lar. Tentar expressar em palavras o que sinto por você é como tentar descrever a imensidão do universo, pois o que temos é algo tão extraordinário e único que transcende qualquer explicação. Você é a luz que ilumina meus dias mais sombrios, a inspiração por trás dos meus sorrisos mais sinceros. Seu olhar é como um refúgio, um lugar onde encontro paz e amor incondicional. Cada detalhe seu é uma obra de arte, esculpida com perfeição pela mão do tempo. Sua bondade é um farol que guia o meu caminho, e sua compaixão é a força que impulsiona meu coração. Seu toque é suave como uma brisa, mas tem o poder de acender o fogo da paixão em mim. Em seus abraços, encontro segurança e aconchego, como se todo o caos do mundo desaparecesse. Sua inteligência é fascinante, um oceano profundo de sabedoria que me encanta a cada mergulho. Seu riso é a melodia mais doce que já ouvi, capaz de transformar um dia comum em uma sinfonia de felicidade. Cada palavra que você pronuncia é como poesia, um doce encantamento aos meus ouvidos. É a sua resiliência que mais admiro, a forma como enfrenta desafios com graciosidade e força. Seu coração generoso é uma fonte inesgotável de amor, um presente que recebo todos os dias. Cada dia ao seu lado é uma bênção, uma oportunidade de crescer, aprender e amar ainda mais. E mesmo enquanto escrevo estas palavras, sei que nunca conseguirei capturar completamente a grandeza do que sinto por você. Minha gratidão por tê-la em minha vida transborda, e meu amor por você cresce a cada batida do meu coração. Você é minha musa, minha confidente, meu amor eterno. Com todo o meu amor, [Seu Nome]</p>
+  <div id="loginContainer">
+    <div id="loginForm">
+      <h2>Login</h2>
+      <label for="username">Nome de Usuário:</label>
+      <input type="text" id="username" required>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" required>
+      <button onclick="login()">Entrar</button>
+      <p>Ainda não tem uma conta? <a href="#" onclick="mostrarRegistro()">Registrar-se</a></p>
     </div>
-    <button onclick="exibirTextoPersonalizado()">Exibir Texto Personalizado</button>
   </div>
+
+  <div id="textContainer">
+    <div id="outputArea">
+      <div id="output">
+        <p>Meu amor, Desde o momento em que nossos caminhos se cruzaram, minha vida ganhou cores mais vivas e o meu coração encontrou o seu verdadeiro lar. Tentar expressar em palavras o que sinto por você é como tentar descrever a imensidão do universo, pois o que temos é algo tão extraordinário e único que transcende qualquer explicação. Você é a luz que ilumina meus dias mais sombrios, a inspiração por trás dos meus sorrisos mais sinceros. Seu olhar é como um refúgio, um lugar onde encontro paz e amor incondicional. Cada detalhe seu é uma obra de arte, esculpida com perfeição pela mão do tempo. Sua bondade é um farol que guia o meu caminho, e sua compaixão é a força que impulsiona meu coração. Seu toque é suave como uma brisa, mas tem o poder de acender o fogo da paixão em mim. Em seus abraços, encontro segurança e aconchego, como se todo o caos do mundo desaparecesse. Sua inteligência é fascinante, um oceano profundo de sabedoria que me encanta a cada mergulho. Seu riso é a melodia mais doce que já ouvi, capaz de transformar um dia comum em uma sinfonia de felicidade. Cada palavra que você pronuncia é como poesia, um doce encantamento aos meus ouvidos. É a sua resiliência que mais admiro, a forma como enfrenta desafios com graciosidade e força. Seu coração generoso é uma fonte inesgotável de amor, um presente que recebo todos os dias. Cada dia ao seu lado é uma bênção, uma oportunidade de crescer, aprender e amar ainda mais. E mesmo enquanto escrevo estas palavras, sei que nunca conseguirei capturar completamente a grandeza do que sinto por você. Minha gratidão por tê-la em minha vida transborda, e meu amor por você cresce a cada batida do meu coração. Você é minha musa, minha confidente, meu amor eterno. Com todo o meu amor, [Seu Nome]</p>
+      </div>
+      <button onclick="exibirTextoPersonalizado()">Exibir Texto Personalizado</button>
+    </div>
+  </div>
+
+  <script>
+    // Lógica do script permanece a mesma
+  </script>
+
+</body>
+</html>
+
 
   <script>
     const declaracoes = [
