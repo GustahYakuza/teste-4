@@ -19,7 +19,7 @@
     <script src="script.js"></script>
     <script>
         // Adicione esta lógica para verificar se o usuário está autenticado
-        const isLoggedIn = /* Adicione aqui a sua lógica de verificação de autenticação */;
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
 
         if (!isLoggedIn) {
             // Redireciona para a página de login se não estiver autenticado
