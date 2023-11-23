@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url('caminho/para/o/seu/fundo-romantico.jpg') center/cover;
+    background-color: #f8f8f8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,50 +25,22 @@ header {
     margin-top: 20px;
 }
 
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
 button {
     background-color: #ff7070;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: #e5673b;
-    transform: translateY(-3px);
 }
 
-@media (max-width: 600px) {
-    header {
-        position: static;
-    }
-
-    form {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
+.compliment-text {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
 }
