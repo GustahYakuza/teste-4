@@ -3,7 +3,7 @@ function login() {
     var password = document.getElementById('password').value;
 
     // Simulação de lógica de login (substitua por uma autenticação real)
-    if (username === 'seu_usuario' && password === 'sua_senha') {
+    if (username === 'anna' && password === 'gatinha') {
         // Salva o estado de autenticação
         localStorage.setItem('isLoggedIn', 'true');
 
