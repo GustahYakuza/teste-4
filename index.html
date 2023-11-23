@@ -16,14 +16,15 @@
 
     h1 {
       color: #ff6f61;
-      margin-top: 50px;
-      font-size: 2.5em;
+      margin-top: 30px;
+      font-size: 2em;
     }
 
     #loginContainer, #textContainer {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
     }
 
@@ -33,10 +34,13 @@
       padding: 20px;
       border-radius: 10px;
       animation: fadeIn 1s ease-in-out;
+      width: 80%;
+      max-width: 400px; /* Limita a largura do formulário para melhor legibilidade em dispositivos móveis */
+      margin: 20px;
     }
 
     textarea {
-      width: 80%;
+      width: 100%;
       height: 150px;
       resize: none;
       margin-bottom: 10px;
@@ -67,6 +71,18 @@
       }
       to {
         opacity: 1;
+      }
+    }
+
+    /* Adicionando estilo único para dispositivos móveis */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      #loginForm, #outputArea {
+        width: 90%;
+        margin: 10px;
       }
     }
   </style>
