@@ -19,6 +19,26 @@
       margin-top: 20px;
       font-size: 18px;
     }
+    #inputArea {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    textarea {
+      width: 300px;
+      height: 100px;
+      resize: none;
+      margin-right: 10px;
+    }
+    button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -26,34 +46,19 @@
   <h1>Te Amo Gatinha</h1>
   <div id="output"></div>
 
+  <div id="inputArea">
+    <textarea id="customText" placeholder="Escreva algo especial..."></textarea>
+    <button onclick="exibirTextoPersonalizado()">Exibir Texto</button>
+  </div>
+
   <script>
-    const declaracoes = [
-      "Você é a luz da minha vida.",
-      "Minha vida é muito melhor com você ao meu lado.",
-      "Seu sorriso ilumina meu dia.",
-      "Amo a forma como você me faz sentir especial.",
-      "Você é a razão do meu sorriso diário."
-    ];
-
-    const elogios = [
-      "Você é incrivelmente talentosa.",
-      "Sua beleza é incomparável.",
-      "Admiro sua força e determinação.",
-      "Você sempre faz o melhor por mim.",
-      "Ninguém me faz tão feliz como você."
-    ];
-
-    function gerarMensagem() {
-      const randomIndex = Math.floor(Math.random() * (declaracoes.length + elogios.length));
-      const mensagem = randomIndex < declaracoes.length ? declaracoes[randomIndex] : elogios[randomIndex - declaracoes.length];
-      document.getElementById('output').innerHTML = `<p>${mensagem}</p>`;
+    function exibirTextoPersonalizado() {
+      const customText = document.getElementById('customText').value;
+      document.getElementById('output').innerHTML = `<p>${customText}</p>`;
     }
 
-    // Exibir uma mensagem automaticamente ao carregar a página
-    gerarMensagem();
-
-    // Você pode adicionar um intervalo para exibir uma nova mensagem a cada, por exemplo, 10 segundos
-    // setInterval(gerarMensagem, 10000);
+    // Exemplo de texto padrão ao carregar a página
+    exibirTextoPersonalizado();
   </script>
 
 </body>
