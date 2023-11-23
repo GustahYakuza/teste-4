@@ -82,30 +82,19 @@
       <div id="output">
         <p>Meu amor, Desde o momento em que nossos caminhos se cruzaram, minha vida ganhou cores mais vivas e o meu coração encontrou o seu verdadeiro lar. Tentar expressar em palavras o que sinto por você é como tentar descrever a imensidão do universo, pois o que temos é algo tão extraordinário e único que transcende qualquer explicação. Você é a luz que ilumina meus dias mais sombrios, a inspiração por trás dos meus sorrisos mais sinceros. Seu olhar é como um refúgio, um lugar onde encontro paz e amor incondicional. Cada detalhe seu é uma obra de arte, esculpida com perfeição pela mão do tempo. Sua bondade é um farol que guia o meu caminho, e sua compaixão é a força que impulsiona meu coração. Seu toque é suave como uma brisa, mas tem o poder de acender o fogo da paixão em mim. Em seus abraços, encontro segurança e aconchego, como se todo o caos do mundo desaparecesse. Sua inteligência é fascinante, um oceano profundo de sabedoria que me encanta a cada mergulho. Seu riso é a melodia mais doce que já ouvi, capaz de transformar um dia comum em uma sinfonia de felicidade. Cada palavra que você pronuncia é como poesia, um doce encantamento aos meus ouvidos. É a sua resiliência que mais admiro, a forma como enfrenta desafios com graciosidade e força. Seu coração generoso é uma fonte inesgotável de amor, um presente que recebo todos os dias. Cada dia ao seu lado é uma bênção, uma oportunidade de crescer, aprender e amar ainda mais. E mesmo enquanto escrevo estas palavras, sei que nunca conseguirei capturar completamente a grandeza do que sinto por você. Minha gratidão por tê-la em minha vida transborda, e meu amor por você cresce a cada batida do meu coração. Você é minha musa, minha confidente, meu amor eterno. Com todo o meu amor, [Seu Nome]</p>
       </div>
-      <button onclick="exibirTextoPersonalizado()">Exibir Texto Personalizado</button>
+      <button onclick="mostrarLogin()">Voltar ao Login</button>
     </div>
   </div>
 
   <script>
-    // Lógica do script permanece a mesma
-  </script>
+    function mostrarConteudoAutenticado() {
+      document.getElementById('loginContainer').style.display = 'none';
+      document.getElementById('textContainer').style.display = 'block';
+    }
 
-</body>
-</html>
-
-
-  <script>
-    const declaracoes = [
-      // Adicione aqui o texto gerado por você com elogios à sua namorada.
-      // Lembre-se de que este é apenas um esboço básico e você pode ajustar conforme necessário.
-    ];
-
-    function exibirTextoPersonalizado() {
-      const customText = document.getElementById('customText').value;
-      document.getElementById('output').innerHTML = `<p>${customText}</p>`;
-      document.getElementById('loginForm').style.display = 'none';
-      document.getElementById('registerForm').style.display = 'none';
-      document.getElementById('outputArea').style.display = 'block';
+    function mostrarTextoPersonalizado() {
+      document.getElementById('loginContainer').style.display = 'none';
+      document.getElementById('textContainer').style.display = 'block';
     }
 
     function login() {
@@ -124,34 +113,16 @@
       }
     }
 
-    function register() {
-      const newUsername = document.getElementById('newUsername').value;
-      const newPassword = document.getElementById('newPassword').value;
-
-      // Simulação de lógica de registro (usando armazenamento local para simplicidade)
-      localStorage.setItem('username', newUsername);
-      localStorage.setItem('password', newPassword);
-
-      alert('Registro bem-sucedido!');
-      mostrarConteudoAutenticado();
-    }
-
-    function mostrarConteudoAutenticado() {
-      document.getElementById('loginForm').style.display = 'none';
-      document.getElementById('registerForm').style.display = 'none';
-      document.getElementById('outputArea').style.display = 'block';
-    }
-
     function mostrarRegistro() {
       document.getElementById('loginForm').style.display = 'none';
       document.getElementById('registerForm').style.display = 'block';
-      document.getElementById('outputArea').style.display = 'none';
+      document.getElementById('textContainer').style.display = 'none';
     }
 
     function mostrarLogin() {
       document.getElementById('loginForm').style.display = 'block';
       document.getElementById('registerForm').style.display = 'none';
-      document.getElementById('outputArea').style.display = 'none';
+      document.getElementById('textContainer').style.display = 'none';
     }
   </script>
 
